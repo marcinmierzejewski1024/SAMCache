@@ -47,8 +47,9 @@
 	image = [UIImage imageWithContentsOfFile:path];
 
 	// Store in cache
-	[self.cache setObject:image forKey:key];
-
+	if(image) {
+		[self.cache setObject:image forKey:key];
+	}
 	return image;
 }
 
